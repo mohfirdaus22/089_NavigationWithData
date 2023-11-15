@@ -28,11 +28,12 @@ fun HalamanDua (
     modifier: Modifier = Modifier
 ) {
     val items = listOf(
-        Pair(stringResource(R.string.quantity), orderUiState.jumlah),
-        Pair(stringResource(R.string.flavor), orderUiState.rasa),
         Pair(stringResource(R.string.nama), orderUiState.nama),
         Pair(stringResource(R.string.no_tlp), orderUiState.noTelp),
         Pair(stringResource(R.string.alamat), orderUiState.alamat),
+        Pair(stringResource(R.string.quantity), orderUiState.jumlah),
+        Pair(stringResource(R.string.flavor), orderUiState.rasa)
+
 
     )
     Column(
