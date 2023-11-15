@@ -32,6 +32,7 @@ fun HalamanDua (
         Pair(stringResource(R.string.flavor), orderUiState.rasa),
         Pair(stringResource(R.string.nama), orderUiState.nama),
         Pair(stringResource(R.string.no_tlp), orderUiState.noTelp),
+        Pair(stringResource(R.string.alamat), orderUiState.alamat),
 
     )
     Column(
