@@ -27,7 +27,8 @@ import com.example.praktikum6.Data.SumberData.flavors
 enum class PengelolaHalaman {
     Home,
     Rasa,
-    Summary
+    Summary,
+    Formulir
 }
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -83,6 +84,13 @@ fun EsJumboApp(
                 HalamanHome (
                     onNextButtonClicked = {
                         navController.navigate(PengelolaHalaman.Rasa.name)})
+            }
+            composable(route = PengelolaHalaman.Formulir.name){
+                HalamanForm(
+                    onSubmitButtonClick = {viewModel.setContact(it)
+                        navController.navigate(PengelolaHalaman.Rasa.name)
+                    },
+                    onCancelButtonClick = {navController.popBackStack()} )
             }
             composable(route = PengelolaHalaman.Rasa.name){
                 val context = LocalContext.current
